@@ -1,0 +1,93 @@
+.quizContainer {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.questionContainer {
+    width: 80%;
+    background: linear-gradient(#100241, #000000);
+    border: 2px solid #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+}
+
+.reponsesContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.reponse {
+    width: 40%;
+    padding: 10px;
+    text-align: center;
+    background: linear-gradient(#0e0124, #22074d);
+    border: 1px solid #FFFFFF;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    margin: 0 10px 20px 10px;
+    cursor: pointer;
+    transition: all 0.2s linear
+}
+
+.reponse:hover,
+.reponse.active {
+    background: linear-gradient(#1c37af, #5925ac);
+}
+
+.reponse.correct {
+    animation: correct 2s ease forwards
+}
+
+@keyframes correct {
+
+    0%,
+    22%,
+    42% {
+        background: linear-gradient(#1c37af, #5925ac);
+    }
+
+    20%,
+    40%,
+    60% {
+        background: linear-gradient(#0e0124, #22074d);
+    }
+
+    62%,
+    100% {
+        background: green;
+    }
+}
+
+.reponse.wrong {
+    animation: wrong 2s ease forwards
+}
+
+@keyframes wrong {
+
+    0%,
+    22%,
+    42% {
+        background: linear-gradient(#1c37af, #5925ac);
+    }
+
+    20%,
+    40%,
+    60% {
+        background: linear-gradient(#0e0124, #22074d);
+    }
+
+    62%,
+    100% {
+        background: crimson;
+    }
+}
